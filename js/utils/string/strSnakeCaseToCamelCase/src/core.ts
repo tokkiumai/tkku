@@ -1,7 +1,10 @@
-export function snakeToCamelCase(str: string): string {
+export function snakeToCamelCase(str: string | undefined): string | null {
+  if (typeof str !== 'string') {
+    return null
+  }
   let result = '',
     uppercaseNext = false
-  for (let i = 0; i < str.length; i += 1) {
+  for (let i = 0; i < str?.length; i += 1) {
     if (uppercaseNext) {
       result += str[i].toUpperCase()
       uppercaseNext = false

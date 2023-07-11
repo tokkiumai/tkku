@@ -10,4 +10,7 @@ describe('snakeToCamelCase', () => {
       'someUnderscoredString',
     )
   })
+  it('returns null when argument is invalid', () => {
+    expect(snakeToCamelCase(undefined)).toBeNull()
+  })
 })
