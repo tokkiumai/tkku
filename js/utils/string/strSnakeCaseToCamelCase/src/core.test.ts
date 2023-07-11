@@ -1,4 +1,4 @@
-import { snakeToCamelCase } from '../src'
+import { snakeToCamelCase } from './index'
 
 
 describe('snakeToCamelCase', () => {
