@@ -1,13 +1,13 @@
 {
   "name": "@tkku/strsnakecasetocamelcase",
-  "version": "2023.1.1",
+  "version": "2023.1.2",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --config jest.config.ts",
     "build": "tsc",
-    "prepare" : "yarn build",
-    "prepublishOnly" : "yarn test",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test",
     "postversion": "git push && git push --tags"
   },
   "homepage": "https://github.com/tokkiumai/tkku/tree/main/js/utils/string/strSnakeCaseToCamelCase",
