@@ -10,7 +10,7 @@
     "prepublishOnly" : "yarn test",
     "postversion": "git push && git push --tags"
   },
-  "homepage": "https://github.com/tokkiumai/tkku/js/utils/string/strSnakeCaseToCamelCase",
+  "homepage": "https://github.com/tokkiumai/tkku/tree/main/js/utils/string/strSnakeCaseToCamelCase",
   "author": "tokkiumai",
   "license": "MIT",
   "devDependencies": {
