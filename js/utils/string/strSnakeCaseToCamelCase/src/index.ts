@@ -1,1 +1,1 @@
-export { snakeToCamelCase } from './core'
+export { strSnakeToCamelCase } from './core'
