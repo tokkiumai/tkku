@@ -1,7 +1,7 @@
 import { strSnakeToCamelCase } from './core'
 
 
-describe('snakeToCamelCase', () => {
+describe('strSnakeToCamelCase', () => {
   it('leaves lower cased string untouched', () => {
     expect(strSnakeToCamelCase('something')).toBe('something')
   })
