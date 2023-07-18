@@ -1,4 +1,4 @@
-import { strSnakeToCamelCase } from '@tkku/strsnakecasetocamelcase'
+import { strSnakeToCamelCase } from '@tkku/strsnaketocamelcase'
 
 type SnakeToCamelCase<S> =
   S extends `${infer T}_${infer U}_${infer V}` ?
