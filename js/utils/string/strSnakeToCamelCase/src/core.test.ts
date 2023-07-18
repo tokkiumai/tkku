@@ -16,4 +16,7 @@ describe('strSnakeToCamelCase', () => {
   it('handles double underscore', () => {
     expect(strSnakeToCamelCase('some__string')).toBe('someString')
   })
+  it('does not uppercase the first letter if string starts with an _', () => {
+    expect(strSnakeToCamelCase('_string_two')).toBe('stringTwo')
+  })
 })

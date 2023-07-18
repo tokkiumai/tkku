@@ -6,6 +6,7 @@ export function strSnakeToCamelCase(str: string | undefined): string | null {
     uppercaseNext = false
   for (let i = 0; i < str?.length; i += 1) {
     if (str[i] === '_') {
+      if (i === 0) continue
       uppercaseNext = true
       continue
     }
