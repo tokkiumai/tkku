@@ -1,18 +1,16 @@
 import { objSnakeToCamelCase } from './core'
 
 describe('objSnakeToCamelCase', () => {
-  it('coverts underscore keys to upper cased', () => {
+  it('converts underscore keys to upper cased', () => {
     const subject = {
       some_field: 1,
       another_field: 'str',
     }
-
     expect(objSnakeToCamelCase(subject)).toStrictEqual({
       someField: 1,
       anotherField: 'str',
     })
   })
-
   it('handles nested objects', () => {
     const subject = {
       underscored_field: 'str',
@@ -23,7 +21,6 @@ describe('objSnakeToCamelCase', () => {
         },
       },
     }
-
     expect(objSnakeToCamelCase(subject)).toStrictEqual({
       underscoredField: 'str',
       nestedObject: {
@@ -34,37 +31,31 @@ describe('objSnakeToCamelCase', () => {
       },
     })
   })
-
   it('handles arrays', () => {
     const subject = {
       array_value: [1, 2, 3],
       underscore_value: 'value',
     }
-
     expect(objSnakeToCamelCase(subject)).toStrictEqual({
       arrayValue: [1, 2, 3],
       underscoreValue: 'value',
     })
   })
-
-  it('handle arrays with nested objects in it', () => {
+  it('handles arrays with nested objects in it', () => {
     const subject = {
       array_value: [1, 2, 3, { some_object: { more_nested: 'str' } }],
       underscore_value: 'value',
     }
-
     expect(objSnakeToCamelCase(subject)).toStrictEqual({
       arrayValue: [1, 2, 3, { someObject: { moreNested: 'str' } }],
       underscoreValue: 'value',
     })
   })
-
   it('excludes provided keys from mapping', () => {
     const subject = {
       key_1: 'some key',
       key_2: 'another key',
     }
-
     expect(objSnakeToCamelCase(subject, ['key_1'])).toStrictEqual({
       key_1: 'some key',
       key2: 'another key',
@@ -74,7 +65,6 @@ describe('objSnakeToCamelCase', () => {
       key2: 'another key',
     })
   })
-
   it('supports nested keys excluding', () => {
     const subject = {
       key_1: 'some_key',
@@ -83,7 +73,6 @@ describe('objSnakeToCamelCase', () => {
         key_2: 'excluded',
       },
     }
-
     expect(objSnakeToCamelCase(subject, ['key_3.key_2'])).toStrictEqual({
       key1: 'some_key',
       key2: 'not excluded',
@@ -92,7 +81,6 @@ describe('objSnakeToCamelCase', () => {
       },
     })
   })
-
   it('supports more than 1 level of recursion for keys excluding', () => {
     const subject = {
       key_1: 'some_key',
@@ -104,7 +92,6 @@ describe('objSnakeToCamelCase', () => {
         },
       },
     }
-
     expect(objSnakeToCamelCase(subject, ['key_3.key_4.key_2'])).toStrictEqual(
       {
         key1: 'some_key',
