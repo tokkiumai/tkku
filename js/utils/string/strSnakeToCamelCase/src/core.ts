@@ -5,13 +5,13 @@ export function strSnakeToCamelCase(str: string | undefined): string | null {
   let result = '',
     uppercaseNext = false
   for (let i = 0; i < str?.length; i += 1) {
+    if (str[i] === '_') {
+      uppercaseNext = true
+      continue
+    }
     if (uppercaseNext) {
       result += str[i].toUpperCase()
       uppercaseNext = false
-      continue
-    }
-    if (str[i] === '_') {
-      uppercaseNext = true
       continue
     }
     result += str[i]
