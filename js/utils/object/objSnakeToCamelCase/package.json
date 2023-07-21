@@ -8,13 +8,13 @@
     "build": "tsc",
     "size": "yarn build && size-limit",
     "prepare": "yarn build",
-    "prepublishOnly": "yarn test",
+    "prepublishOnly": "yarn test && yarn size",
     "postversion": "git push && git push --tags"
   },
   "size-limit": [
     {
       "path": "lib/index.js",
-      "limit": "40 B"
+      "limit": "200 B"
     }
   ],
   "homepage": "https://github.com/tokkiumai/tkku/tree/main/js/utils/object/objsnaketocamelcase",
