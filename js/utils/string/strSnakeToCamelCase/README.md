@@ -1,4 +1,3 @@
-#### Size limit is 200 B
 ## Installation
 ```shell
 yarn add @tkku/strsnaketocamelcase
