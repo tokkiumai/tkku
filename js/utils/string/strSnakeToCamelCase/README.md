@@ -7,7 +7,7 @@ Converts a string from snake case typing into camel case
 
 ### Usage
 ```ts
-/** size >200 B */
+/** size less than 200 B */
 import { strSnakeToCamelCase } from '@tkku/strsnaketocamelcase'
 
 ('snake_case') -> 'snakeCase'

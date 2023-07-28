@@ -5,7 +5,7 @@ yarn add @tkku/objsnaketocamelcase
 
 ## Usage
 ```ts
-/** size >200 B */
+/** size less than 200 B */
 import { objSnakeToCamelCase } from '@tkku/objsnaketocamelcase'
 
 objSnakeToCamelCase   (object, excludeKeys: string | Array<string>) => object | null
