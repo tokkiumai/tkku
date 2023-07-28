@@ -5,6 +5,7 @@ yarn add @tkku/objsnaketocamelcase
 
 ## Usage
 ```ts
+/** size >200 B */
 import { objSnakeToCamelCase } from '@tkku/objsnaketocamelcase'
 
 objSnakeToCamelCase(object) => object | null
@@ -12,7 +13,6 @@ objSnakeToCamelCase<T>(object) => T | null
 
 ```
 ### Converting keys
-below, the syntax is: invoking a function with an object ({}) -> returns value
 ```ts
 /** converts nested keys */
 ({ key_1: '', key_2: { sub_key: '' } }) => 
