@@ -8,9 +8,8 @@ yarn add @tkku/objsnaketocamelcase
 /** size >200 B */
 import { objSnakeToCamelCase } from '@tkku/objsnaketocamelcase'
 
-objSnakeToCamelCase(object) => object | null
-objSnakeToCamelCase<T>(object) => T | null
-
+objSnakeToCamelCase   (object, excludeKeys: string | Array<string>) => object | null
+objSnakeToCamelCase<T>(object, excludeKeys: string | Array<string>) => T | null
 ```
 ### Converting keys
 ```ts
