@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@tkku/strsnaketocamelcase':
-    specifier: ^1.1.2
-    version: 1.1.2
+    specifier: ^1.1.7
+    version: 1.1.7
 
 devDependencies:
   '@size-limit/file':
@@ -699,8 +699,8 @@ packages:
       size-limit: 8.2.6
     dev: true
 
-  /@tkku/strsnaketocamelcase@1.1.2:
-    resolution: {integrity: sha512-kr/66cA2eK3hmVhrmmI4zxIulPYXzVm+BxUrtJXxQc6lR/UMUMXKFWS6Ro0FulTGVvyzX1eCwR0DU/sINseTmw==}
+  /@tkku/strsnaketocamelcase@1.1.7:
+    resolution: {integrity: sha512-eyn6XSqitlI39R4lfR08lp2n53gXVCoH6qGKfQwJd1VYrE6RdErhVDn3/6B6/Nt5jBgAUmDvykdUtk9+/EWZiA==}
     dev: false
 
   /@tsconfig/node10@1.0.9:
@@ -961,7 +961,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001517
-      electron-to-chromium: 1.4.475
+      electron-to-chromium: 1.4.477
       node-releases: 2.0.13
       update-browserslist-db: 1.0.11(browserslist@4.21.9)
     dev: true
@@ -1165,8 +1165,8 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /electron-to-chromium@1.4.475:
-    resolution: {integrity: sha512-mTye5u5P98kSJO2n7zYALhpJDmoSQejIGya0iR01GpoRady8eK3bw7YHHnjA1Rfi4ZSLdpuzlAC7Zw+1Zu7Z6A==}
+  /electron-to-chromium@1.4.477:
+    resolution: {integrity: sha512-shUVy6Eawp33dFBFIoYbIwLHrX0IZ857AlH9ug2o4rvbWmpaCUdBpQ5Zw39HRrfzAFm4APJE9V+E2A/WB0YqJw==}
     dev: true
 
   /emittery@0.13.1:

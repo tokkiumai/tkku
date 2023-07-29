@@ -35,7 +35,7 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "@tkku/strsnaketocamelcase": "^1.1.2"
+    "@tkku/strsnaketocamelcase": "^1.1.7"
   },
   "homepage": "https://github.com/tokkiumai/tkku/tree/main/js/utils/object/objsnaketocamelcase",
   "author": "tokkiumai",

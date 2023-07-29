@@ -64,7 +64,7 @@ export function objSnakeToCamelCase<T>(obj: Record<string, any>, exclude: Keys =
       result[key] = value
       continue
     }
-    let _key = strSnakeToCamelCase(key) as string
+    let _key = strSnakeToCamelCase(key)
     if (value instanceof Object) {
       if (Array.isArray(value)) {
         result[_key] = value.map(item => {
