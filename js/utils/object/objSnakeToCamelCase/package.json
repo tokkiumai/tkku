@@ -1,7 +1,7 @@
 {
   "name": "@tkku/objsnaketocamelcase",
   "description": "Converts object keys from snake to camel case",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
