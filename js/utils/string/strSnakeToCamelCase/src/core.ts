@@ -1,4 +1,6 @@
-export function strSnakeToCamelCase(str: string | undefined): string | null {
+export function strSnakeToCamelCase(str: string): string
+export function strSnakeToCamelCase(str: any): null
+export function strSnakeToCamelCase(str: any): string | null {
   if (typeof str !== 'string') {
     return null
   }
