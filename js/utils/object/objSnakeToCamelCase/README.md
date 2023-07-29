@@ -5,7 +5,7 @@ yarn add @tkku/objsnaketocamelcase
 
 ## Usage
 ```ts
-/** size less than 200 B */
+/** size is less than 200 B */
 import { objSnakeToCamelCase } from '@tkku/objsnaketocamelcase'
 
 objSnakeToCamelCase   (object, excludeKeys: string | Array<string>) => object | null
@@ -33,6 +33,6 @@ objSnakeToCamelCase<T>(object, excludeKeys: string | Array<string>) => T | null
  { some_key: '', key_to_exclude: '' }
 
 /** Pass a nested key */
-({ key_1: '', nested_object: { nested_key: '' }}, 'nested_object.nested_key') =>
- { key1:  '', nestedObject:  { nested_key: '' }}
+({ some_object: { nested_key: '' }, nested_key: '' }, 'some_object.nested_key') =>
+ { someObject:  { nested_key: '' }, nestedKey:  '' }
 ```
