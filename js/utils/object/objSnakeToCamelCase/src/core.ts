@@ -37,8 +37,13 @@ type Keys = string | string[] | Map<string, number>
  * Returns null if passed objects is not an instance of Object
  *
  * @returns Object | null
+ * Object - if object (non-array) was passed
+ * null - if any different type was passed
  * */
-export function objSnakeToCamelCase<T>(obj: Record<string, any>, exclude: Keys = [], nestedKey = ''): T | null {
+export function objSnakeToCamelCase<T>(obj: Record<string, any>, exclude?: Keys, nestedKey?: string): T
+export function objSnakeToCamelCase<T>(
+  obj: number | null | undefined | object | boolean | Array<any>, exclude?: Keys, nestedKey?: string): null
+export function objSnakeToCamelCase<T>(obj: Record<string, any> | any, exclude: Keys = [], nestedKey = ''): T | null {
   function getExcludedKeys(keys: Keys): Map<string, number> {
     if (keys instanceof Map) {
       return keys
@@ -50,7 +55,7 @@ export function objSnakeToCamelCase<T>(obj: Record<string, any>, exclude: Keys =
     })
     return map
   }
-  if (!(obj instanceof Object)) {
+  if (typeof obj !== 'object' || Array.isArray(obj)) {
     return null
   }
   let result: Record<string, any> = {}

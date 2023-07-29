@@ -1,5 +1,5 @@
 export function strSnakeToCamelCase(str: string): string
-export function strSnakeToCamelCase(str: any): null
+export function strSnakeToCamelCase(str: number | null | undefined | object | boolean | Array<any>): null
 export function strSnakeToCamelCase(str: any): string | null {
   if (typeof str !== 'string') {
     return null
