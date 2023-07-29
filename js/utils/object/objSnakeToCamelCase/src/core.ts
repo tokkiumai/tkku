@@ -29,6 +29,7 @@ import { strSnakeToCamelCase } from '@tkku/strsnaketocamelcase'
 // }
 // type B = ObjSnakeToCamelCaseNested<typeof obj>
 
+type Keys = string | string[] | Map<string, number>
 /**
  * Recursively replaces the snake cased keys in an object with camel cased
  * To exclude a keys - provide second "exclude" argument (string | Array<string)
@@ -37,18 +38,29 @@ import { strSnakeToCamelCase } from '@tkku/strsnaketocamelcase'
  *
  * @returns Object | null
  * */
-export function objSnakeToCamelCase<T>(obj: Record<string, any>, exclude: string | string[] = [], nestedKey = ''): T | null {
+export function objSnakeToCamelCase<T>(obj: Record<string, any>, exclude: Keys = [], nestedKey = ''): T | null {
+  function getExcludedKeys(keys: Keys): Map<string, number> {
+    if (keys instanceof Map) {
+      return keys
+    }
+    let keysArr = Array.isArray(keys) ? keys : [keys]
+    let map = new Map()
+    keysArr.forEach(key => {
+      map.set(key, 1)
+    })
+    return map
+  }
   if (!(obj instanceof Object)) {
     return null
   }
   let result: Record<string, any> = {}
-  let excluded = Array.isArray(exclude) ? exclude : [exclude]
+  let excluded = getExcludedKeys(exclude)
   for (let [key, value] of Object.entries(obj)) {
-    if (excluded.includes(key)) {
+    if (excluded.has(key)) {
       result[key] = value
       continue
     }
-    if (nestedKey && excluded.some(excludedKey => excludedKey === `${nestedKey}.${key}`)) {
+    if (nestedKey && excluded.has(`${nestedKey}.${key}`)) {
       result[key] = value
       continue
     }
