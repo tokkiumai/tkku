@@ -45,9 +45,6 @@ export function objSnakeToCamelCase<T>(
   obj: number | null | undefined | object | boolean | Array<any>, exclude?: Keys, nestedKey?: string): null
 export function objSnakeToCamelCase<T>(obj: Record<string, any> | any, exclude: Keys = [], nestedKey = ''): T | null {
   function getExcludedKeys(keys: Keys): Map<string, number> {
-    if (keys instanceof Map) {
-      return keys
-    }
     let keysArr = Array.isArray(keys) ? keys : [keys]
     let map = new Map()
     keysArr.forEach(key => {
@@ -59,7 +56,7 @@ export function objSnakeToCamelCase<T>(obj: Record<string, any> | any, exclude: 
     return null
   }
   let result: Record<string, any> = {}
-  let excluded = getExcludedKeys(exclude)
+  let excluded = exclude instanceof Map ? exclude : getExcludedKeys(exclude)
   for (let [key, value] of Object.entries(obj)) {
     if (excluded.has(key)) {
       result[key] = value
