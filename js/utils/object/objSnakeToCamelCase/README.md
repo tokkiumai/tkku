@@ -8,8 +8,9 @@ yarn add @tkku/objsnaketocamelcase
 /** size is less than 200 B */
 import { objSnakeToCamelCase } from '@tkku/objsnaketocamelcase'
 
-objSnakeToCamelCase   ({ ... }, excludeKeys?: string | Array<string>) => object | null
-objSnakeToCamelCase<T>({ ... }, excludeKeys?: string | Array<string>) => T | null
+objSnakeToCamelCase   (object: Record<string, any>, excludeKeys?: string | Array<string>) => object | null
+objSnakeToCamelCase<T>(object: Record<string, any>, excludeKeys?: string | Array<string>) => T | null
+// returns null if object is not of an object type (non-array)
 ```
 ### Converting keys
 ```ts
