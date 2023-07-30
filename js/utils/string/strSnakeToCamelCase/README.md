@@ -9,12 +9,14 @@ Converts a string from snake case typing into camel case
 ```ts
 /** size is less than 200 B */
 import { strSnakeToCamelCase } from '@tkku/strsnaketocamelcase'
-strSnakeToCamelCase('snake_case_string') => 'snakeCaseString'
+strSnakeToCamelCase('snake_case_string') //   => 'snakeCaseString'
   
   
-('snake_case') => 'snakeCase'
+('snake_case') //    => 'snakeCase'
+  
  /** double underscore is removed */
-('snake__case') => 'snakeCase'
+('snake__case') //   => 'snakeCase'
+  
 /** leading underscore is removed  */
-('_snake_case') => 'snakeCase'
+('_snake_case') //   => 'snakeCase'
 ```
