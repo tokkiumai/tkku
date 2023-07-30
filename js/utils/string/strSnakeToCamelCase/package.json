@@ -1,7 +1,7 @@
 {
   "name": "@tkku/strsnaketocamelcase",
   "description": "Converts string snake to camel case",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
