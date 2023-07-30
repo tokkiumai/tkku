@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@tkku/strsnaketocamelcase':
-    specifier: ^1.1.7
-    version: 1.1.7
+    specifier: ^1.1.8
+    version: 1.1.8
 
 devDependencies:
   '@size-limit/file':
@@ -699,8 +699,8 @@ packages:
       size-limit: 8.2.6
     dev: true
 
-  /@tkku/strsnaketocamelcase@1.1.7:
-    resolution: {integrity: sha512-eyn6XSqitlI39R4lfR08lp2n53gXVCoH6qGKfQwJd1VYrE6RdErhVDn3/6B6/Nt5jBgAUmDvykdUtk9+/EWZiA==}
+  /@tkku/strsnaketocamelcase@1.1.8:
+    resolution: {integrity: sha512-mKkTWCBdr9+ZbNREtyRXamwUinVnQnOzpbSyB0Znh5revhh8TO5+TKVrKA3ZE8BMItn2AxDhOECDfcYYT1WqMA==}
     dev: false
 
   /@tsconfig/node10@1.0.9:
