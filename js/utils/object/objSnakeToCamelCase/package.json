@@ -37,7 +37,7 @@
   "dependencies": {
     "@tkku/strsnaketocamelcase": "^1.1.8"
   },
-  "homepage": "https://github.com/tokkiumai/tkku/tree/main/js/utils/object/objsnaketocamelcase",
+  "homepage": "https://github.com/tokkiumai/tkku/tree/main/js/utils/object/objSnakeToCamelCase",
   "author": "tokkiumai",
   "license": "MIT",
   "keywords": [
