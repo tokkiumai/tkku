@@ -58,6 +58,11 @@ export function objSnakeToCamelCase<T>(obj: Record<string, any> | any, exclude: 
   let result: Record<string, any> = {}
   let excluded = exclude instanceof Map ? exclude : getExcludedKeys(exclude)
   for (let [key, value] of Object.entries(obj)) {
+    if (excluded.has(`.${key}`)) {
+      result[key] = value
+      excluded.delete(`.${key}`)
+      continue
+    }
     if (excluded.has(key)) {
       result[key] = value
       continue

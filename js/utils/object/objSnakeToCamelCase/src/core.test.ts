@@ -105,4 +105,9 @@ describe('objSnakeToCamelCase', () => {
       },
     )
   })
+  it('excludes top level key by leading dot without touching the deep', () => {
+    expect(objSnakeToCamelCase({ key_1: '', key_2: { key_1: '' } }, '.key_1')).toStrictEqual({
+      key_1: '', key2: { key1: '' }
+    })
+  })
 })

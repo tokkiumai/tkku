@@ -36,4 +36,8 @@ objSnakeToCamelCase<T>(object: Record<string, any>, excludeKeys?: string | Array
 /** Pass a nested key */
 ({ some_object: { nested_key: '' }, nested_key: '' }, 'some_object.nested_key') =>
  { someObject:  { nested_key: '' }, nestedKey:  '' }
+
+/** If you want to exclude top level key without touching the nested one, pass a key with the leading dot */
+({ key_key: '', nested_obj: { key_key: '' } }, '.key_key') =>
+ { key_key: '', nestedObj:  { keyKey:  '' } }
 ```
