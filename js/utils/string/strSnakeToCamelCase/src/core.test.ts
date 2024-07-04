@@ -10,9 +10,6 @@ describe('strSnakeToCamelCase', () => {
       'someUnderscoredString',
     )
   })
-  it('returns the arg when argument is invalid', () => {
-    expect(strSnakeToCamelCase(undefined)).toBeUndefined()
-  })
   it('handles double underscore', () => {
     expect(strSnakeToCamelCase('some__string')).toBe('someString')
   })

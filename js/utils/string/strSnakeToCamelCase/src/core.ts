@@ -1,7 +1,4 @@
-export function strSnakeToCamelCase<T>(str: T): T | string {
-  if (typeof str !== 'string') {
-    return str
-  }
+export function strSnakeToCamelCase(str: string): string {
   let result = '',
     uppercaseNext = false
   for (let i = 0; i < str?.length; i += 1) {
